@@ -1,0 +1,1069 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>矢作橋駅周辺 幼稚園・こども園情報まとめ（2026年版）</title>
+  <style>
+    :root {
+      --primary: #f47b20;
+      --primary-light: #fff4ec;
+      --primary-dark: #c05c10;
+      --secondary: #4caf82;
+      --secondary-light: #e8f7ef;
+      --accent: #e24a4a;
+      --accent-light: #fef0f0;
+      --text: #333;
+      --text-sub: #666;
+      --bg: #f9f6f2;
+      --card-bg: #fff;
+      --border: #e0d8d0;
+      --radius: 14px;
+      --shadow: 0 4px 20px rgba(0,0,0,0.08);
+      --shadow-hover: 0 8px 30px rgba(0,0,0,0.14);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', 'BIZ UDGothic', Meiryo, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.75;
+    }
+
+    /* ===== HEADER ===== */
+    header {
+      background: linear-gradient(135deg, #f47b20 0%, #ffc266 60%, #ffe08a 100%);
+      color: #fff;
+      padding: 48px 24px 36px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    header::before {
+      content: '';
+      position: absolute;
+      top: -60px; right: -60px;
+      width: 220px; height: 220px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.12);
+    }
+    header::after {
+      content: '';
+      position: absolute;
+      bottom: -80px; left: -40px;
+      width: 280px; height: 280px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.08);
+    }
+    header h1 {
+      font-size: clamp(1.3rem, 4vw, 2rem);
+      font-weight: 900;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.15);
+      letter-spacing: 0.04em;
+      position: relative; z-index: 1;
+    }
+    header p.subtitle {
+      margin-top: 10px;
+      font-size: 0.95rem;
+      opacity: 0.92;
+      position: relative; z-index: 1;
+    }
+    .badge-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 16px;
+      position: relative; z-index: 1;
+    }
+    .badge {
+      background: rgba(255,255,255,0.28);
+      border: 1.5px solid rgba(255,255,255,0.6);
+      border-radius: 20px;
+      padding: 4px 14px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: #fff;
+      backdrop-filter: blur(4px);
+    }
+
+    /* ===== INTRO BOX ===== */
+    .intro-box {
+      max-width: 860px;
+      margin: 28px auto 0;
+      padding: 0 16px;
+    }
+    .intro-box .inner {
+      background: var(--card-bg);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 24px 28px;
+      border-left: 5px solid var(--primary);
+    }
+    .intro-box h2 {
+      font-size: 1rem;
+      font-weight: 800;
+      color: var(--primary-dark);
+      margin-bottom: 10px;
+    }
+    .criteria-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      list-style: none;
+    }
+    .criteria-list li {
+      background: var(--primary-light);
+      border-radius: 8px;
+      padding: 6px 16px;
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: var(--primary-dark);
+      display: flex; align-items: center; gap: 6px;
+    }
+    .criteria-list li::before { content: '✔'; }
+
+    /* ===== SECTIONS ===== */
+    .section-title {
+      text-align: center;
+      margin: 48px 0 24px;
+      font-size: 1.4rem;
+      font-weight: 900;
+      color: var(--primary-dark);
+      letter-spacing: 0.05em;
+    }
+    .section-title span {
+      display: inline-block;
+      border-bottom: 3px solid var(--primary);
+      padding-bottom: 4px;
+    }
+
+    /* ===== GRID ===== */
+    .cards-grid {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 16px;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 28px;
+    }
+
+    /* ===== CARD ===== */
+    .card {
+      background: var(--card-bg);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      transition: box-shadow 0.25s, transform 0.25s;
+    }
+    .card:hover {
+      box-shadow: var(--shadow-hover);
+      transform: translateY(-4px);
+    }
+
+    .card-header {
+      position: relative;
+    }
+    .card-img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      display: block;
+    }
+    .card-img-placeholder {
+      width: 100%;
+      height: 200px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 3rem;
+      background: linear-gradient(135deg, #f0ebe4, #e4dfd9);
+      color: #bbb;
+    }
+    .card-badge {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      font-weight: 800;
+      color: #fff;
+    }
+    .badge-public { background: #2196f3; }
+    .badge-private { background: var(--primary); }
+    .badge-kodomo { background: var(--secondary); }
+    .badge-anjo { background: #9c27b0; }
+
+    .bus-badge {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      padding: 4px 10px;
+      border-radius: 20px;
+      font-size: 0.73rem;
+      font-weight: 800;
+      display: flex; align-items: center; gap: 4px;
+    }
+    .bus-ok { background: var(--secondary); color: #fff; }
+    .bus-no { background: #999; color: #fff; }
+    .bus-check { background: #ff9800; color: #fff; }
+
+    .card-body {
+      padding: 20px 22px;
+    }
+    .card-name {
+      font-size: 1.12rem;
+      font-weight: 900;
+      color: var(--primary-dark);
+      margin-bottom: 4px;
+    }
+    .card-corp {
+      font-size: 0.78rem;
+      color: var(--text-sub);
+      margin-bottom: 14px;
+    }
+
+    .info-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      font-size: 0.84rem;
+      color: var(--text);
+      margin-bottom: 6px;
+    }
+    .info-icon {
+      font-size: 0.92rem;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .star-row {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin: 12px 0 14px;
+    }
+    .stars { color: #f5a623; font-size: 1rem; letter-spacing: 2px; }
+    .star-score { font-weight: 800; font-size: 1rem; color: #f5a623; }
+    .star-count { font-size: 0.78rem; color: var(--text-sub); }
+    .star-source { font-size: 0.72rem; color: var(--text-sub); }
+
+    .divider { border: none; border-top: 1px solid var(--border); margin: 14px 0; }
+
+    .feature-title {
+      font-size: 0.78rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-sub);
+      margin-bottom: 8px;
+    }
+    .features {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 14px;
+    }
+    .feat-tag {
+      background: var(--primary-light);
+      color: var(--primary-dark);
+      border-radius: 6px;
+      padding: 3px 10px;
+      font-size: 0.78rem;
+      font-weight: 700;
+    }
+    .feat-tag.green { background: var(--secondary-light); color: #2e7d55; }
+    .feat-tag.blue { background: #e3f0ff; color: #1a5fb0; }
+    .feat-tag.purple { background: #f3e8ff; color: #6a1b9a; }
+    .feat-tag.red { background: var(--accent-light); color: #b71c1c; }
+
+    .recommend-box {
+      background: var(--primary-light);
+      border-radius: 10px;
+      padding: 12px 14px;
+      margin-top: 4px;
+    }
+    .recommend-box .r-title {
+      font-size: 0.78rem;
+      font-weight: 800;
+      color: var(--primary-dark);
+      margin-bottom: 6px;
+      display: flex; align-items: center; gap: 4px;
+    }
+    .recommend-box .r-title::before { content: '⭐'; }
+    .recommend-box ul {
+      list-style: none;
+      font-size: 0.82rem;
+      color: #555;
+    }
+    .recommend-box ul li::before { content: '→ '; color: var(--primary); font-weight: 700; }
+    .recommend-box ul li { margin-bottom: 3px; }
+
+    .note-box {
+      background: var(--accent-light);
+      border-left: 4px solid var(--accent);
+      border-radius: 6px;
+      padding: 10px 14px;
+      margin-top: 12px;
+      font-size: 0.8rem;
+      color: #b71c1c;
+    }
+    .note-box strong { display: block; margin-bottom: 2px; }
+
+    .card-footer {
+      padding: 12px 22px 18px;
+      border-top: 1px solid var(--border);
+      background: #fafafa;
+    }
+    .hp-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--primary-dark);
+      font-weight: 700;
+      font-size: 0.85rem;
+      text-decoration: none;
+      padding: 8px 16px;
+      border: 2px solid var(--primary);
+      border-radius: 8px;
+      transition: background 0.18s, color 0.18s;
+    }
+    .hp-link:hover { background: var(--primary); color: #fff; }
+
+    /* ===== COMPARISON TABLE ===== */
+    .table-wrap {
+      max-width: 1100px;
+      margin: 0 auto 10px;
+      padding: 0 16px;
+      overflow-x: auto;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: var(--card-bg);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      font-size: 0.84rem;
+    }
+    table th {
+      background: var(--primary);
+      color: #fff;
+      padding: 12px 10px;
+      text-align: center;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+    table th:first-child { border-radius: var(--radius) 0 0 0; }
+    table th:last-child { border-radius: 0 var(--radius) 0 0; }
+    table td {
+      padding: 10px 10px;
+      border-bottom: 1px solid var(--border);
+      text-align: center;
+      vertical-align: middle;
+    }
+    table tr:last-child td { border-bottom: none; }
+    table tr:nth-child(even) td { background: #fdf9f5; }
+    table td:first-child { text-align: left; font-weight: 800; white-space: nowrap; }
+    .check-ok { color: var(--secondary); font-size: 1.1rem; font-weight: 900; }
+    .check-no { color: #ccc; font-size: 1.1rem; }
+    .check-q  { color: #ff9800; font-size: 1.1rem; }
+
+    /* ===== ADDITIONAL ===== */
+    .additional-cards {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 16px 10px;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 24px;
+    }
+    .add-card {
+      background: var(--card-bg);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 22px 24px;
+      border-top: 4px solid var(--secondary);
+    }
+    .add-card h3 { font-size: 1rem; font-weight: 900; color: #2e7d55; margin-bottom: 4px; }
+    .add-card .add-corp { font-size: 0.78rem; color: var(--text-sub); margin-bottom: 12px; }
+    .add-card .info-row { margin-bottom: 4px; }
+
+    /* ===== DISCLAIMER / NOTES ===== */
+    .disclaimer {
+      max-width: 860px;
+      margin: 40px auto 50px;
+      padding: 0 16px;
+    }
+    .disclaimer .inner {
+      background: #fff8e1;
+      border-left: 5px solid #f5a623;
+      border-radius: var(--radius);
+      padding: 20px 24px;
+    }
+    .disclaimer h3 { color: #7c5900; font-size: 0.95rem; font-weight: 900; margin-bottom: 10px; }
+    .disclaimer ul { list-style: none; font-size: 0.84rem; color: #5a4200; }
+    .disclaimer ul li { margin-bottom: 6px; padding-left: 14px; position: relative; }
+    .disclaimer ul li::before { content: '⚠'; position: absolute; left: 0; }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background: var(--primary-dark);
+      color: #fddfbe;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.82rem;
+    }
+
+    /* ===== RESPONSIVE: TABLET ===== */
+    @media (max-width: 768px) {
+      header { padding: 36px 16px 28px; }
+      .cards-grid { grid-template-columns: 1fr; padding: 0 12px; gap: 20px; }
+      .additional-cards { grid-template-columns: 1fr; padding: 0 12px; gap: 18px; }
+      .section-title { font-size: 1.2rem; margin: 36px 0 18px; }
+      .table-wrap { padding: 0 12px; }
+      .intro-box { padding: 0 12px; }
+      .intro-box .inner { padding: 18px 16px; }
+      .disclaimer { padding: 0 12px; }
+    }
+
+    /* ===== RESPONSIVE: SMARTPHONE ===== */
+    @media (max-width: 480px) {
+      header { padding: 28px 14px 22px; }
+      header h1 { font-size: 1.25rem; line-height: 1.5; }
+      header p.subtitle { font-size: 0.85rem; }
+      .badge { font-size: 0.75rem; padding: 3px 10px; }
+      .badge-row { gap: 5px; margin-top: 12px; }
+
+      .card-img, .card-img-placeholder { height: 180px; }
+      .card-body { padding: 16px 16px; }
+      .card-name { font-size: 1rem; }
+      .card-corp { font-size: 0.76rem; }
+      .info-row { font-size: 0.82rem; }
+      .feat-tag { font-size: 0.76rem; padding: 3px 8px; }
+      .recommend-box ul { font-size: 0.8rem; }
+
+      /* HPリンクを全幅ボタンにする */
+      .card-footer { padding: 12px 16px 16px; }
+      .hp-link {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        padding: 10px 16px;
+        font-size: 0.88rem;
+        text-align: center;
+      }
+
+      .section-title { font-size: 1.1rem; padding: 0 12px; margin: 32px 0 14px; }
+
+      /* 比較テーブル → スマホ向けカード表示 */
+      .table-wrap { padding: 0 12px; }
+      table, thead, tbody, th, td, tr { display: block; }
+      table thead { display: none; }
+      table tr {
+        background: var(--card-bg);
+        border-radius: 12px;
+        box-shadow: var(--shadow);
+        margin-bottom: 14px;
+        overflow: hidden;
+      }
+      table tr:nth-child(even) td { background: transparent; }
+      table td {
+        display: flex;
+        align-items: flex-start;
+        gap: 8px;
+        text-align: left;
+        padding: 8px 14px;
+        border-bottom: 1px solid var(--border);
+        font-size: 0.82rem;
+        white-space: normal;
+      }
+      table td:last-child { border-bottom: none; }
+      table td:first-child {
+        background: var(--primary);
+        color: #fff;
+        font-size: 0.9rem;
+        padding: 10px 14px;
+        white-space: normal;
+        text-align: left;
+        font-weight: 900;
+      }
+      table td::before {
+        content: attr(data-label);
+        font-weight: 800;
+        color: var(--primary-dark);
+        min-width: 80px;
+        flex-shrink: 0;
+        font-size: 0.75rem;
+      }
+      table td:first-child::before { display: none; }
+
+      .add-card { padding: 18px 16px; }
+
+      .disclaimer .inner { padding: 16px 14px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ===== HEADER ===== -->
+<header>
+  <h1>🏫 矢作橋駅周辺<br>幼稚園・こども園 情報まとめ</h1>
+  <p class="subtitle">2026年版 ｜ 岡崎市・安城市エリア</p>
+  <div class="badge-row">
+    <span class="badge">📍 矢作橋駅 徒歩・車圏内</span>
+    <span class="badge">🚌 送迎バス情報あり</span>
+    <span class="badge">⭐ 口コミ評価掲載</span>
+    <span class="badge">🔗 公式HP直リンク</span>
+  </div>
+</header>
+
+<!-- ===== INTRO ===== -->
+<div class="intro-box">
+  <div class="inner">
+    <h2>🔍 選定条件</h2>
+    <ul class="criteria-list">
+      <li>矢作橋駅から車で10分以内</li>
+      <li>送迎バス完備を優先</li>
+      <li>口コミ評価が良い園</li>
+      <li>情報は2023〜2026年の最新データを使用</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ===== CANDIDATE KINDERGARTENS ===== -->
+<h2 class="section-title"><span>👀 候補の幼稚園・こども園（5選）</span></h2>
+
+<div class="cards-grid">
+
+  <!-- ① 矢作こども園 -->
+  <div class="card">
+    <div class="card-header">
+      <img
+        class="card-img"
+        src="https://jice.homemate-research.com/pubuser1/pubuser_facility_img/5/1/9/00000000000000317915/0000025921/00000000000000317915_0000025921_2.jpg"
+        alt="矢作こども園 正門"
+        onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"
+      />
+      <div class="card-img-placeholder" style="display:none;">🏫</div>
+      <span class="card-badge badge-public">公立こども園</span>
+      <span class="bus-badge bus-check">🚌 要確認</span>
+    </div>
+    <div class="card-body">
+      <div class="card-name">① 矢作こども園</div>
+      <div class="card-corp">岡崎市立 幼保連携型認定こども園</div>
+
+      <div class="info-row"><span class="info-icon">📍</span><span>岡崎市矢作町字西河原49 〒444-0943</span></div>
+      <div class="info-row"><span class="info-icon">📞</span><span><a href="tel:0564313536" style="color:inherit;text-decoration:none;">0564-31-3536</a></span></div>
+      <div class="info-row"><span class="info-icon">🚶</span><span>名鉄 矢作橋駅 <strong>徒歩4分</strong></span></div>
+      <div class="info-row"><span class="info-icon">🕗</span><span>月〜土 8:00〜17:30（保育時間内）</span></div>
+      <div class="info-row"><span class="info-icon">👶</span><span>1号認定110名 ／ 2号認定50名（計160名）　3〜5歳</span></div>
+
+      <div class="star-row">
+        <span class="stars">★★★☆☆</span>
+        <span class="star-score">3.0</span>
+        <span class="star-count">（1件）</span>
+        <span class="star-source">homemate-research</span>
+      </div>
+
+      <hr class="divider" />
+      <div class="feature-title">特徴・プログラム</div>
+      <div class="features">
+        <span class="feat-tag blue">公立で安定運営</span>
+        <span class="feat-tag blue">1号・2号両対応</span>
+        <span class="feat-tag green">駅近（徒歩4分）</span>
+        <span class="feat-tag">地域密着型</span>
+        <span class="feat-tag">閑静な住宅街</span>
+      </div>
+
+      <div class="recommend-box">
+        <div class="r-title">おすすめポイント</div>
+        <ul>
+          <li>駅から徒歩圏内で最もアクセスが良い</li>
+          <li>公立のため保育料が比較的抑えられる</li>
+          <li>公立ならではの安定した運営体制</li>
+        </ul>
+      </div>
+
+      <div class="note-box">
+        <strong>⚠ 注意事項</strong>
+        公立こども園のため<strong>送迎バスがない場合が多い</strong>です。必ず園に電話で確認してください。
+      </div>
+    </div>
+    <div class="card-footer">
+      <a href="https://www.city.okazaki.lg.jp/kosodate/kosodate/1012221/1012226/1013289.html" target="_blank" rel="noopener" class="hp-link">
+        🌐 岡崎市公式HP（こども園情報）
+      </a>
+    </div>
+  </div>
+
+  <!-- ② 矢作白鳥幼稚園 -->
+  <div class="card">
+    <div class="card-header">
+      <div class="card-img-placeholder">🦢</div>
+      <span class="card-badge badge-private">私立幼稚園</span>
+      <span class="bus-badge bus-ok">🚌 バスあり</span>
+    </div>
+    <div class="card-body">
+      <div class="card-name">② 矢作白鳥幼稚園</div>
+      <div class="card-corp">学校法人 矢作学園（矢作学園3園の最新）</div>
+
+      <div class="info-row"><span class="info-icon">📍</span><span>岡崎市東本郷町字川原田39 〒444-0945</span></div>
+      <div class="info-row"><span class="info-icon">📞</span><span><a href="tel:0564326810" style="color:inherit;text-decoration:none;">0564-32-6810</a></span></div>
+      <div class="info-row"><span class="info-icon">🚗</span><span>矢作橋駅から<strong>車約5分</strong>（徒歩約25分）</span></div>
+      <div class="info-row"><span class="info-icon">🕗</span><span>7:50〜18:00（預かり保育拡大：令和5年〜）</span></div>
+      <div class="info-row"><span class="info-icon">📅</span><span>2003年開園（矢作学園で最も新しい園舎）</span></div>
+
+      <div class="star-row">
+        <span class="stars">★★★★★</span>
+        <span class="star-score">4.5</span>
+        <span class="star-count">（8件）</span>
+        <span class="star-source">Yahoo!マップ</span>
+      </div>
+      <div class="star-row" style="margin-top:-8px;">
+        <span class="stars">★★★★★</span>
+        <span class="star-score">4.66</span>
+        <span class="star-count">（6件）</span>
+        <span class="star-source">みんなの学校情報</span>
+      </div>
+
+      <hr class="divider" />
+      <div class="feature-title">特徴・プログラム</div>
+      <div class="features">
+        <span class="feat-tag blue">英語（外国人講師）</span>
+        <span class="feat-tag blue">体育専門講師</span>
+        <span class="feat-tag blue">スイミング保育内</span>
+        <span class="feat-tag green">鼓笛・リズム遊び</span>
+        <span class="feat-tag">自園調理給食</span>
+        <span class="feat-tag">長期休み 預かり保育</span>
+        <span class="feat-tag">安城市・豊田市からも通園</span>
+      </div>
+
+      <div class="recommend-box">
+        <div class="r-title">おすすめポイント</div>
+        <ul>
+          <li>口コミ評価 4.5〜4.66 とエリア最高評価</li>
+          <li>スイミング・英語が<strong>保育費内に含まれる</strong>（追加費用なし）</li>
+          <li>「のびのびと子どもを生活させてくれる」と評判</li>
+          <li>2003年開園で最も新しい施設</li>
+        </ul>
+      </div>
+
+      <blockquote style="margin-top:10px;padding:10px;background:#f7f7f7;border-radius:8px;font-size:0.82rem;color:#555;border-left:3px solid #ddd;">
+        「生徒の意思を尊重し、無理強いしない園。先生方も子供とたくさん遊んでくれておすすめです。」<br>
+        <span style="font-size:0.75rem;color:#aaa;">— みんなの学校情報 口コミ</span>
+      </blockquote>
+    </div>
+    <div class="card-footer">
+      <a href="https://yahagigakuen.ed.jp/" target="_blank" rel="noopener" class="hp-link">
+        🌐 矢作学園 公式HP
+      </a>
+    </div>
+  </div>
+
+  <!-- ③ やはぎみやこ認定こども園 -->
+  <div class="card">
+    <div class="card-header">
+      <img
+        class="card-img"
+        src="https://aoyamagakuen.com/wp-content/uploads/2022/08/c1a7bf565308c544d87a3ab0956131df.jpg"
+        alt="やはぎみやこ認定こども園"
+        onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"
+      />
+      <div class="card-img-placeholder" style="display:none;">🌸</div>
+      <span class="card-badge badge-kodomo">私立こども園</span>
+      <span class="bus-badge bus-ok">🚌 バスあり</span>
+    </div>
+    <div class="card-body">
+      <div class="card-name">③ やはぎみやこ認定こども園</div>
+      <div class="card-corp">学校法人 青山学園 ／ 幼保連携型認定こども園（2023年移行）</div>
+
+      <div class="info-row"><span class="info-icon">📍</span><span>岡崎市富永町字平田10-1 〒444-0946</span></div>
+      <div class="info-row"><span class="info-icon">📞</span><span><a href="tel:0564328100" style="color:inherit;text-decoration:none;">0564-32-8100</a>（FAX: 0564-32-8200）</span></div>
+      <div class="info-row"><span class="info-icon">✉</span><span>yahagi@aoyamagakuen.com</span></div>
+      <div class="info-row"><span class="info-icon">🚗</span><span>矢作橋駅から<strong>車約6分</strong></span></div>
+      <div class="info-row"><span class="info-icon">🕗</span><span>7:30〜18:30（エリア最長の保育時間）</span></div>
+      <div class="info-row"><span class="info-icon">👶</span><span>0歳〜5歳対応（生後6ヶ月〜）/ 園児127名</span></div>
+
+      <hr class="divider" />
+      <div class="feature-title">特徴・プログラム</div>
+      <div class="features">
+        <span class="feat-tag purple">てのひらたいむ（独自知育）</span>
+        <span class="feat-tag blue">英会話（外国人講師）</span>
+        <span class="feat-tag blue">体育あそび</span>
+        <span class="feat-tag green">造形あそび</span>
+        <span class="feat-tag green">リズムあそび</span>
+        <span class="feat-tag">食育6段階プログラム</span>
+        <span class="feat-tag">田植え〜稲刈り体験</span>
+        <span class="feat-tag green">チアダンス教室</span>
+        <span class="feat-tag">0〜2歳 3号認定対応</span>
+        <span class="feat-tag">看護師常駐</span>
+        <span class="feat-tag red">通園バス 月3,000円</span>
+      </div>
+
+      <div style="background:#f3e8ff;border-radius:10px;padding:12px 14px;margin:12px 0;">
+        <div style="font-size:0.78rem;font-weight:800;color:#6a1b9a;margin-bottom:6px;">🌟 独自プログラム「てのひらたいむ」</div>
+        <div style="font-size:0.82rem;color:#555;">毎日2〜3分、出席カード・言葉カード・俳句/論語の素読・カスタネット演奏・モーツァルト音楽での正座瞑想を行い、<strong>集中力・非認知能力</strong>を育てます。</div>
+      </div>
+
+      <div class="recommend-box">
+        <div class="r-title">おすすめポイント</div>
+        <ul>
+          <li>7:30〜18:30と保育時間が最も長く、共働き家庭に対応</li>
+          <li>今年（2023年）認定こども園化で現0〜2歳のお子さんも預けられる</li>
+          <li>課外教室に保育後<strong>直行できる</strong>（送迎不要で習い事が充実）</li>
+          <li>食育・栽培体験・異年齢交流が豊富</li>
+          <li>コスト明示で月々の費用が把握しやすい</li>
+        </ul>
+      </div>
+    </div>
+    <div class="card-footer">
+      <a href="https://aoyamagakuen.com/introduction/yahagi-miyako-kodomo/" target="_blank" rel="noopener" class="hp-link">
+        🌐 やはぎみやこ 公式HP
+      </a>
+    </div>
+  </div>
+
+  <!-- ④ 橋目幼稚園 -->
+  <div class="card">
+    <div class="card-header">
+      <img
+        class="card-img"
+        src="https://yahagigakuen.ed.jp/wp-content/uploads/2015/05/top-nagasedai-w550.jpg"
+        alt="矢作学園 施設イメージ"
+        onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"
+      />
+      <div class="card-img-placeholder" style="display:none;">🌳</div>
+      <span class="card-badge badge-private">私立幼稚園</span>
+      <span class="bus-badge bus-ok">🚌 バスあり</span>
+    </div>
+    <div class="card-body">
+      <div class="card-name">④ 橋目幼稚園</div>
+      <div class="card-corp">学校法人 矢作学園（矢作地区で最も歴史ある幼稚園・1979年開園）</div>
+
+      <div class="info-row"><span class="info-icon">📍</span><span>岡崎市橋目町毘沙門11 〒444-0908</span></div>
+      <div class="info-row"><span class="info-icon">📞</span><span><a href="tel:0564322088" style="color:inherit;text-decoration:none;">0564-32-2088</a></span></div>
+      <div class="info-row"><span class="info-icon">🚗</span><span>矢作橋駅から<strong>車約6〜7分</strong></span></div>
+      <div class="info-row"><span class="info-icon">🕗</span><span>7:50〜18:00（通常保育＋預かり保育）</span></div>
+      <div class="info-row"><span class="info-icon">📅</span><span>1979年開園（矢作学園グループ第一号）</span></div>
+
+      <hr class="divider" />
+      <div class="feature-title">特徴・プログラム</div>
+      <div class="features">
+        <span class="feat-tag blue">英語（外国人講師）</span>
+        <span class="feat-tag blue">体育専門講師</span>
+        <span class="feat-tag blue">スイミング保育内</span>
+        <span class="feat-tag green">鼓笛・リズム遊び</span>
+        <span class="feat-tag">自園調理給食</span>
+        <span class="feat-tag green">広い園庭・自然環境</span>
+        <span class="feat-tag green">作物収穫体験</span>
+        <span class="feat-tag">2歳児保育（うさぎ組）</span>
+        <span class="feat-tag">園庭開放（地域交流）</span>
+        <span class="feat-tag">ゆうびんごっこ 等</span>
+      </div>
+
+      <div class="recommend-box">
+        <div class="r-title">おすすめポイント</div>
+        <ul>
+          <li>矢作地区で最も長い歴史と実績（45年超）</li>
+          <li>スイミングが保育費内に含まれる（追加費用なし）</li>
+          <li>毘沙門天に隣接し<strong>自然環境豊か</strong>な広い園庭</li>
+          <li>2歳児保育（うさぎ組）があり兄弟入園もしやすい</li>
+        </ul>
+      </div>
+    </div>
+    <div class="card-footer">
+      <a href="https://yahagigakuen.ed.jp/?page_id=64" target="_blank" rel="noopener" class="hp-link">
+        🌐 橋目幼稚園 個別ページ
+      </a>
+    </div>
+  </div>
+
+  <!-- ⑤ さくら学園 慈恵幼稚園 -->
+  <div class="card">
+    <div class="card-header">
+      <div class="card-img-placeholder">🌸</div>
+      <span class="card-badge badge-anjo">認定こども園（安城市）</span>
+      <span class="bus-badge bus-check">🚌 要確認</span>
+    </div>
+    <div class="card-body">
+      <div class="card-name">⑤ さくら学園 慈恵幼稚園</div>
+      <div class="card-corp">学校法人 さくら学園 ／ 幼保連携型認定こども園（2019年移行）</div>
+
+      <div class="info-row"><span class="info-icon">📍</span><span>安城市西別所町中新田18 〒446-0012</span></div>
+      <div class="info-row"><span class="info-icon">📞</span><span><a href="tel:0566756237" style="color:inherit;text-decoration:none;">0566-75-6237</a>（FAX: 0566-75-5950）</span></div>
+      <div class="info-row"><span class="info-icon">✉</span><span>jikei1.y@sakura-g.ac.jp</span></div>
+      <div class="info-row"><span class="info-icon">🚗</span><span>矢作橋駅から<strong>車約8〜10分</strong>（安城市内）</span></div>
+      <div class="info-row"><span class="info-icon">👶</span><span>定員315名（各学年105名）　3〜5歳</span></div>
+
+      <hr class="divider" />
+      <div class="feature-title">特徴・プログラム</div>
+      <div class="features">
+        <span class="feat-tag blue">英語教育</span>
+        <span class="feat-tag blue">体育教育</span>
+        <span class="feat-tag purple">マーチング演奏会（アンフォーレ）</span>
+        <span class="feat-tag green">田植え→稲刈り→おにぎりパーティー</span>
+        <span class="feat-tag green">カブトムシ飼育・昆虫観察</span>
+        <span class="feat-tag">プラネタリウム見学（年中）</span>
+        <span class="feat-tag">お泊り保育（年長）</span>
+        <span class="feat-tag">旅立ちマナー（感謝茶会）</span>
+        <span class="feat-tag">敬老施設との交流</span>
+        <span class="feat-tag">子育てひろば（毎週火曜）</span>
+      </div>
+
+      <div class="recommend-box" style="background:#f3e8ff;">
+        <div class="r-title" style="color:#6a1b9a;">おすすめポイント</div>
+        <ul style="color:#555;">
+          <li>アンフォーレ（安城市文化センター）でのマーチング演奏会は本格的</li>
+          <li>カブトムシ育て・稲作など<strong>自然体験が充実</strong></li>
+          <li>定員315名の大規模園で活気がある</li>
+        </ul>
+      </div>
+
+      <div class="note-box">
+        <strong>⚠ 注意事項</strong>
+        <strong>岡崎市ではなく安城市</strong>の園です。矢作橋駅からは車で8〜10分程度。送迎バスの有無は必ず園に確認してください。
+      </div>
+    </div>
+    <div class="card-footer">
+      <a href="http://jikei1-y.sakura-g.ac.jp/" target="_blank" rel="noopener" class="hp-link">
+        🌐 慈恵幼稚園 公式HP
+      </a>
+    </div>
+  </div>
+
+</div><!-- /cards-grid -->
+
+<!-- ===== COMPARISON TABLE ===== -->
+<h2 class="section-title" style="margin-top:56px;"><span>📊 比較一覧表</span></h2>
+
+<div class="table-wrap">
+  <table>
+    <thead>
+      <tr>
+        <th>園名</th>
+        <th>種別</th>
+        <th>駅からのアクセス</th>
+        <th>送迎バス</th>
+        <th>英語</th>
+        <th>スイミング</th>
+        <th>給食</th>
+        <th>保育時間（最長）</th>
+        <th>0〜2歳対応</th>
+        <th>口コミ評価</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>① 矢作こども園</td>
+        <td data-label="種別">公立こども園</td>
+        <td data-label="アクセス">徒歩4分（最短）</td>
+        <td data-label="送迎バス" class="check-q">△要確認</td>
+        <td data-label="英語" class="check-no">—</td>
+        <td data-label="スイミング" class="check-no">—</td>
+        <td data-label="給食" class="check-ok">◎</td>
+        <td data-label="保育時間">8:00〜17:30</td>
+        <td data-label="0〜2歳" class="check-no">—</td>
+        <td data-label="口コミ">★3.0（1件）</td>
+      </tr>
+      <tr>
+        <td>② 矢作白鳥幼稚園</td>
+        <td data-label="種別">私立幼稚園</td>
+        <td data-label="アクセス">車5分</td>
+        <td data-label="送迎バス" class="check-ok">◎あり</td>
+        <td data-label="英語" class="check-ok">◎</td>
+        <td data-label="スイミング" class="check-ok">◎費用内</td>
+        <td data-label="給食" class="check-ok">◎自園調理</td>
+        <td data-label="保育時間">7:50〜18:00</td>
+        <td data-label="0〜2歳" class="check-no">—</td>
+        <td data-label="口コミ">★4.5〜4.66（最高）</td>
+      </tr>
+      <tr>
+        <td>③ やはぎみやここども園</td>
+        <td data-label="種別">私立こども園</td>
+        <td data-label="アクセス">車6分</td>
+        <td data-label="送迎バス" class="check-ok">◎あり（月3,000円）</td>
+        <td data-label="英語" class="check-ok">◎年長</td>
+        <td data-label="スイミング" class="check-no">—</td>
+        <td data-label="給食" class="check-ok">◎</td>
+        <td data-label="保育時間">7:30〜18:30（最長）</td>
+        <td data-label="0〜2歳" class="check-ok">◎0歳〜</td>
+        <td data-label="口コミ">情報収集中</td>
+      </tr>
+      <tr>
+        <td>④ 橋目幼稚園</td>
+        <td data-label="種別">私立幼稚園</td>
+        <td data-label="アクセス">車6〜7分</td>
+        <td data-label="送迎バス" class="check-ok">◎あり</td>
+        <td data-label="英語" class="check-ok">◎</td>
+        <td data-label="スイミング" class="check-ok">◎費用内</td>
+        <td data-label="給食" class="check-ok">◎自園調理</td>
+        <td data-label="保育時間">7:50〜18:00</td>
+        <td data-label="0〜2歳" class="check-ok">○2歳児組</td>
+        <td data-label="口コミ">—</td>
+      </tr>
+      <tr>
+        <td>⑤ 慈恵幼稚園（安城市）</td>
+        <td data-label="種別">私立こども園</td>
+        <td data-label="アクセス">車8〜10分</td>
+        <td data-label="送迎バス" class="check-q">△要確認</td>
+        <td data-label="英語" class="check-ok">◎</td>
+        <td data-label="スイミング" class="check-no">—</td>
+        <td data-label="給食" class="check-ok">◎</td>
+        <td data-label="保育時間">—</td>
+        <td data-label="0〜2歳" class="check-no">—（3歳〜）</td>
+        <td data-label="口コミ">—</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- ===== ADDITIONAL RECOMMENDATIONS ===== -->
+<h2 class="section-title" style="margin-top:56px;"><span>💡 その他おすすめ候補</span></h2>
+
+<div class="additional-cards">
+
+  <!-- 長瀬台幼稚園 -->
+  <div class="add-card">
+    <h3>長瀬台幼稚園</h3>
+    <div class="add-corp">学校法人 矢作学園（矢作学園3園のひとつ）</div>
+    <div class="info-row"><span class="info-icon">📍</span><span>岡崎市橋目町割塚3-3</span></div>
+    <div class="info-row"><span class="info-icon">📞</span><span><a href="tel:0564326721" style="color:inherit;text-decoration:none;">0564-32-6721</a></span></div>
+    <div class="info-row"><span class="info-icon">🚗</span><span>矢作橋駅から車<strong>約7〜8分</strong></span></div>
+    <hr class="divider" />
+    <div class="features">
+      <span class="feat-tag blue">英語（外国人講師）</span>
+      <span class="feat-tag blue">体育専門講師</span>
+      <span class="feat-tag blue">スイミング保育内</span>
+      <span class="feat-tag green">ドングリの木がある自然豊かな園庭</span>
+      <span class="feat-tag green">ヤマモモ・ブドウ・サクランボ収穫</span>
+      <span class="feat-tag">折り紙・編み物など</span>
+    </div>
+    <div class="info-row" style="margin-top:10px;font-size:0.82rem;color:#555;">
+      ツリーハウス・築山＆トンネルなど最近遊具を充実（H30〜R6改修）。洋式トイレ完備（R6対応）。矢作橋・橋目・北野・大樹寺など広域から通園実績あり。
+    </div>
+    <div style="margin-top:12px;">
+      <a href="https://yahagigakuen.ed.jp/?page_id=66" target="_blank" rel="noopener" class="hp-link" style="font-size:0.83rem;">
+        🌐 長瀬台幼稚園 個別ページ
+      </a>
+    </div>
+  </div>
+
+  <!-- たつみ幼稚園 -->
+  <div class="add-card">
+    <h3>たつみ幼稚園</h3>
+    <div class="add-corp">岡崎市緑丘エリア ／ 令和8年4月より<strong>認定こども園移行予定</strong></div>
+    <div class="info-row"><span class="info-icon">📍</span><span>岡崎市緑丘1丁目2番地3</span></div>
+    <div class="info-row"><span class="info-icon">🚗</span><span>矢作橋駅から車<strong>約8分</strong></span></div>
+    <hr class="divider" />
+    <div style="background:#e8f7ef;border-radius:8px;padding:10px 12px;font-size:0.83rem;color:#2e7d55;">
+      <strong>注目ポイント：</strong><br>
+      令和8年（2026年）4月より<strong>認定こども園に移行予定</strong>。新たに0〜2歳の保育部門が加わり、より柔軟な利用が可能になる見込み。詳細は園に直接お問い合わせください。
+    </div>
+    <div style="margin-top:12px;">
+      ※公式HP、詳細情報は園に直接問い合わせをお奨めします
+    </div>
+  </div>
+
+  <!-- 矢作西保育園 -->
+  <div class="add-card">
+    <h3>矢作西保育園</h3>
+    <div class="add-corp">岡崎市立 認可公立保育園</div>
+    <div class="info-row"><span class="info-icon">📍</span><span>西本郷町字和志山101-4 〒444-0045</span></div>
+    <div class="info-row"><span class="info-icon">📞</span><span><a href="tel:0564315502" style="color:inherit;text-decoration:none;">0564-31-5502</a></span></div>
+    <div class="info-row"><span class="info-icon">🚗</span><span>矢作橋駅から車<strong>約5〜7分</strong></span></div>
+    <hr class="divider" />
+    <div style="font-size:0.83rem;color:#555;">
+      岡崎市立の保育園のため<strong>保育料が認可保育所料金</strong>（所得に応じた住民税均等割）で安心。<strong>共働き家庭の2号認定</strong>向け施設です。送迎バスは公立のためなし（要確認）。幼稚園ではなく保育園という点はご注意ください。
+    </div>
+  </div>
+
+</div>
+
+<!-- ===== PHOTO GALLERY ===== -->
+<h2 class="section-title" style="margin-top:56px;"><span>📷 写真ギャラリー</span></h2>
+
+<div style="max-width:1100px;margin:0 auto 20px;padding:0 16px;display:grid;grid-template-columns:repeat(auto-fill,minmax(min(260px,45%),1fr));gap:16px;">
+  <figure style="margin:0;border-radius:12px;overflow:hidden;box-shadow:var(--shadow);">
+    <img src="https://jice.homemate-research.com/pubuser1/pubuser_facility_img/5/1/9/00000000000000317915/0000025921/00000000000000317915_0000025921_1.jpg"
+      alt="矢作こども園"
+      style="width:100%;height:180px;object-fit:cover;display:block;"
+      onerror="this.parentElement.style.display='none';" />
+    <figcaption style="padding:8px 12px;background:#fff;font-size:0.78rem;color:#666;">矢作こども園</figcaption>
+  </figure>
+  <figure style="margin:0;border-radius:12px;overflow:hidden;box-shadow:var(--shadow);">
+    <img src="https://jice.homemate-research.com/pubuser1/pubuser_facility_img/5/1/9/00000000000000317915/0000025921/00000000000000317915_0000025921_8.jpg"
+      alt="矢作こども園 通用門"
+      style="width:100%;height:180px;object-fit:cover;display:block;"
+      onerror="this.parentElement.style.display='none';" />
+    <figcaption style="padding:8px 12px;background:#fff;font-size:0.78rem;color:#666;">矢作こども園 通用門</figcaption>
+  </figure>
+  <figure style="margin:0;border-radius:12px;overflow:hidden;box-shadow:var(--shadow);">
+    <img src="https://aoyamagakuen.com/wp-content/uploads/2022/08/LINE_ALBUM_20240801_240801_1-1.jpg"
+      alt="やはぎみやこ認定こども園 子どもたち"
+      style="width:100%;height:180px;object-fit:cover;display:block;"
+      onerror="this.parentElement.style.display='none';" />
+    <figcaption style="padding:8px 12px;background:#fff;font-size:0.78rem;color:#666;">やはぎみやこ 子どもたちの様子</figcaption>
+  </figure>
+  <figure style="margin:0;border-radius:12px;overflow:hidden;box-shadow:var(--shadow);">
+    <img src="https://aoyamagakuen.com/wp-content/uploads/2022/08/a8d9e6691f24f3b8158005d5e45f322a.jpg"
+      alt="やはぎみやこ認定こども園 園内"
+      style="width:100%;height:180px;object-fit:cover;display:block;"
+      onerror="this.parentElement.style.display='none';" />
+    <figcaption style="padding:8px 12px;background:#fff;font-size:0.78rem;color:#666;">やはぎみやこ 園内の様子</figcaption>
+  </figure>
+  <figure style="margin:0;border-radius:12px;overflow:hidden;box-shadow:var(--shadow);">
+    <img src="https://aoyamagakuen.com/wp-content/uploads/2022/08/LINE_ALBUM_20240801_240802_2.jpg"
+      alt="やはぎみやこ 異年齢交流"
+      style="width:100%;height:180px;object-fit:cover;display:block;"
+      onerror="this.parentElement.style.display='none';" />
+    <figcaption style="padding:8px 12px;background:#fff;font-size:0.78rem;color:#666;">やはぎみやこ 異年齢交流</figcaption>
+  </figure>
+  <figure style="margin:0;border-radius:12px;overflow:hidden;box-shadow:var(--shadow);">
+    <img src="https://yahagigakuen.ed.jp/wp-content/uploads/2015/05/top-nagasedai-w550.jpg"
+      alt="長瀬台幼稚園"
+      style="width:100%;height:180px;object-fit:cover;display:block;"
+      onerror="this.parentElement.style.display='none';" />
+    <figcaption style="padding:8px 12px;background:#fff;font-size:0.78rem;color:#666;">長瀬台幼稚園（矢作学園）</figcaption>
+  </figure>
+  <figure style="margin:0;border-radius:12px;overflow:hidden;box-shadow:var(--shadow);">
+    <img src="https://aoyamagakuen.com/wp-content/uploads/2022/08/c57b2e42674eef149447bee883eac5af.jpg"
+      alt="やはぎみやこ 畑・農業体験"
+      style="width:100%;height:180px;object-fit:cover;display:block;"
+      onerror="this.parentElement.style.display='none';" />
+    <figcaption style="padding:8px 12px;background:#fff;font-size:0.78rem;color:#666;">やはぎみやこ 畑・農業体験</figcaption>
+  </figure>
+  <figure style="margin:0;border-radius:12px;overflow:hidden;box-shadow:var(--shadow);">
+    <img src="https://aoyamagakuen.com/wp-content/uploads/2022/06/km1.jpg"
+      alt="やはぎみやこ 入園案内"
+      style="width:100%;height:180px;object-fit:cover;display:block;"
+      onerror="this.parentElement.style.display='none';" />
+    <figcaption style="padding:8px 12px;background:#fff;font-size:0.78rem;color:#666;">やはぎみやこ 入園のご案内</figcaption>
+  </figure>
+</div>
+
+<!-- ===== DISCLAIMER ===== -->
+<div class="disclaimer">
+  <div class="inner">
+    <h3>⚠️ ご利用上の注意・免責事項</h3>
+    <ul>
+      <li>本情報は2025〜2026年に各園の公式HP・岡崎市公式HP等から収集したものです。内容は変更になる場合があります。</li>
+      <li><strong>送迎バスの有無・ルート・費用は必ず各園に直接電話でご確認ください</strong>（特に矢作こども園・慈恵幼稚園）。</li>
+      <li>慈恵幼稚園は<strong>岡崎市ではなく安城市</strong>に所在します。矢作橋駅からの実際の所要時間は道路状況により異なります。</li>
+      <li>入園定員・空き状況・令和8年度（2026年度）の募集情報は各園に直接お問い合わせください。</li>
+      <li>写真は各園の公式HPより引用しています。著作権は各学校法人に帰属します。</li>
+      <li>口コミは掲載時点のものであり、個人の感想です。</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <p>矢作橋駅周辺 幼稚園・こども園 情報まとめ ／ 2026年版</p>
+  <p style="margin-top:4px;opacity:0.75;font-size:0.78rem;">岡崎市・安城市 ｜ 情報収集：2025〜2026年 ｜ 各园の最新情報は必ず公式HPまたは直接お問い合わせください</p>
+</footer>
+
+</body>
+</html>
